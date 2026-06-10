@@ -1,47 +1,32 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=24112712&assignment_repo_type=AssignmentRepo)
 # Day 10 Lab: Data Pipeline & Data Observability
 
-**Student Email:** email@example.com
-**Name:** (Dien ten cua ban)
-
----
+**Student ID:** AI20K-2A202600645
+**Name:** Nguyen Thi Yen
 
 ## Mo ta
 
-(Mo ta ngan gon bai lab va nhung gi ban da lam)
+Xay dung ETL pipeline doc JSON, loai du lieu khong hop le, chuan hoa category,
+tinh gia giam 10%, them timestamp quan sat va luu ket qua ra CSV. Bai lab cung
+so sanh tac dong cua clean data va garbage data len AI agent.
 
----
+## Cach chay
 
-## Cach chay (How to Run)
-
-### Prerequisites
 ```bash
-pip install pandas
-```
-
-### Chay ETL Pipeline
-```bash
+pip install pandas pytest
 python solution.py
+python generate_garbage.py
+python agent_simulation.py
+pytest -q
 ```
-
-### Chay Agent Simulation (Stress Test)
-```bash
-# Mo ta cach ban chay thi nghiem Clean vs Garbage data
-```
-
----
 
 ## Cau truc thu muc
 
-```
-├── solution.py              # ETL Pipeline script
-├── processed_data.csv       # Output cua pipeline
-├── experiment_report.md     # Bao cao thi nghiem
-└── README.md                # File nay
-```
-
----
+- `solution.py`: ETL pipeline
+- `processed_data.csv`: output cua pipeline
+- `experiment_report.md`: bao cao stress test
+- `agent_simulation.py`: mo phong agent
 
 ## Ket qua
 
-(Tom tat ket qua: bao nhieu records da xu ly, bao nhieu bi loai, v.v.)
+Pipeline doc 5 records, giu lai 3 records hop le va loai 2 records loi. Clean
+data giup agent chon Laptop; garbage data khien agent chon outlier Nuclear Reactor.
